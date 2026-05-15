@@ -1,0 +1,28 @@
+.mobile-nav-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  font-size: 20px;
+  border: none;
+  transition: var(--transition);
+}
+
+.mobile-nav-toggle:hover {
+  background-color: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: flex;
+  }
+}

@@ -1,0 +1,97 @@
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 30px;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.section {
+  padding: 30px 0;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-line {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent);
+  margin: 10px auto 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.primary-btn {
+  background-color: var(--accent);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px 10px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+}

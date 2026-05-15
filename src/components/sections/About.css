@@ -1,0 +1,165 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.about-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(108, 99, 255, 0.2);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: var(--transition);
+  display: block;
+}
+
+.about-img:hover .about-image {
+  transform: scale(1.05);
+}
+
+.about-text h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  border-left: 4px solid var(--accent);
+  transition: var(--transition);
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+.info-title {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.about-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.about-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: var(--hover-color);
+}
+
+.about-link:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.about-link i {
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-img {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .personal-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text h3 {
+    font-size: 20px;
+  }
+
+  .personal-info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    max-width: 100%;
+  }
+
+  .personal-info {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info-item {
+    padding: 10px;
+  }
+
+  .about-links {
+    flex-direction: column;
+  }
+
+  .about-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

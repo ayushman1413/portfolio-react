@@ -1,0 +1,140 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(108, 99, 255, 0.05) 100%);
+  padding: 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 2px 20px rgba(108, 99, 255, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.typed-text {
+  color: var(--accent);
+  font-weight: 600;
+  min-width: 200px;
+  display: inline-block;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  flex-wrap: wrap;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: var(--accent);
+  opacity: 0.7;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding: 40px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .typed-text {
+    min-width: 100px;
+  }
+}
