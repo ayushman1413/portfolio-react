@@ -6,6 +6,8 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [autoPlay, setAutoPlay] = useState(true)
 
+
+  
   const testimonials = [
     {
       text: 'Ayushman created an outstanding website for my business. His attention to detail and creative approach exceeded my expectations. Highly recommended!',

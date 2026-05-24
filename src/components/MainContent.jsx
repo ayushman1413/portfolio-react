@@ -59,4 +59,5 @@ const MainContent = ({ onMobileNavToggle, isDarkTheme }) => {
   )
 }
 
+
 export default MainContent
